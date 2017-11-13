@@ -1,0 +1,45 @@
+{
+  "name": "build-your-node-cli",
+  "description": "Seamlessly deploy your Node.js app to your server",
+  "version": "1.0.0",
+  "author": "Future Studio <info@futurestud.io>",
+  "bugs": {
+    "url": "https://github.com/fs-opensource/build-your-node-cli/issues"
+  },
+  "contributors": [
+    {
+      "name": "Marcus Poehls",
+      "email": "marcus@futurestud.io"
+    },
+    {
+      "name": "Norman Peitek",
+      "email": "norman@futurestud.io"
+    },
+    {
+      "name": "Christian Fellner",
+      "email": "christian@futurestud.io"
+    }
+  ],
+  "dependencies": {
+    "@adonisjs/ace": "~4.0.7",
+    "semver": "~5.4.1"
+  },
+  "devDependencies": {
+    "eslint": "~4.11.0",
+    "eslint-config-standard": "~10.2.1",
+    "eslint-plugin-import": "~2.8.0",
+    "eslint-plugin-node": "~5.2.1",
+    "eslint-plugin-promise": "~3.6.0",
+    "eslint-plugin-standard": "~3.0.1"
+  },
+  "homepage": "https://github.com/fs-opensource/build-your-node-cli#readme",
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fs-opensource/build-your-node-cli.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
