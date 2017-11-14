@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 'use strict'
 
 const { Command } = require('@adonisjs/ace')
@@ -6,18 +7,23 @@ const Semver = require('semver')
 
 class Deploy extends Command {
   static get signature () {
-    return `
-    deploy
+    return `deploy
     { version? : Semver version shortcut }
     { -s, --skip-release: Skip release tag }
-    { -t, --without-tests: Skip test run before deployment }
-    `
+    { -t, --without-tests: Skip test run before deployment }`
   }
 
   static get description () {
     return 'Deploy a new version of your website'
   }
 
+  /**
+   * Handle the "deploy" command
+   *
+   * @param {*} args   list of arguments for the "deploy" command
+   * @param {*} flags  an object of flags where each value is either "null" or "true".
+   *                   Check the signature for available flags
+   */
   async handle (args, { skipRelease, withoutTests }) {
     console.log(args)
 
