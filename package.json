@@ -22,7 +22,6 @@
   ],
   "dependencies": {
     "@adonisjs/ace": "~4.0.7",
-    "dotenv": "~4.0.0",
     "execa": "~0.8.0",
     "listr": "~0.13.0",
     "release-it": "~4.3.0",
