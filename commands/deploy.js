@@ -23,12 +23,7 @@ class Deploy extends Command {
    * about the command.
    */
   static get description () {
-    return `
-    Deploy a new version of your project.
-    Running this command runs a list of tasks:
-    tests, git tag, bumping the version in package.json
-    and updating the code on your server.
-    `
+    return 'Deploy a new version of your project.'
   }
 
   /**
