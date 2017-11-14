@@ -23,7 +23,12 @@ class Deploy extends Command {
    * about the command.
    */
   static get description () {
-    return 'Deploy a new version of your website'
+    return `
+    Deploy a new version of your project.
+    Running this command runs a list of tasks:
+    tests, git tag, bumping the version in package.json
+    and updating the code on your server.
+    `
   }
 
   /**
@@ -37,7 +42,11 @@ class Deploy extends Command {
     try {
       // either ask for the new version of let the user confirm the selected version
       // this gives context on the actual version bump
-      version = await (!version ? this.askForVersionBump(flags) : this.confirmVersionInput(version))
+      if (version) {
+        version = await this.confirmVersionInput(version)
+      } else {
+        version = await this.askForVersionBump(flags)
+      }
 
       // wait for the deployment process to finish
       await this.runDeployment(version, flags)
@@ -65,7 +74,7 @@ class Deploy extends Command {
     const currentVersion = Pkg.version
     console.log(
       `\nPublish a new version of ${this.chalk.bold.green(Pkg.name)}, currently ${this.chalk.bold.dim(
-        `(${currentVersion})`
+        `${currentVersion}`
       )}\n`
     )
 
@@ -115,7 +124,9 @@ class Deploy extends Command {
 
     // ask for confirmation to give context about the version bump
     // if the user declines, stop here
-    const proceed = await this.confirm(`This deploys version ${newVersion}. Proceed?`)
+    const proceed = await this.confirm(
+      `This deploys ${this.chalk.bold(Pkg.name)} ${this.chalk.bold(newVersion)}. Proceed?`
+    )
     if (!proceed) {
       console.log(this.chalk.magenta('Gotcha. Stopping here 🛑'))
       process.exit(1)
