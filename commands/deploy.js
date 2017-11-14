@@ -1,15 +1,10 @@
-#!/usr/bin/env node
 'use strict'
 
 const { Command } = require('@adonisjs/ace')
 const Pkg = require('./../package.json')
-const Dotenv = require('dotenv')
 const Semver = require('semver')
 const Execa = require('execa')
 const Listr = require('listr')
-const Path = require('path')
-
-Dotenv.config({ path: Path.resolve(__dirname, '.env') })
 
 class Deploy extends Command {
   /**
