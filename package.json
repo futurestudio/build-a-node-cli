@@ -24,6 +24,7 @@
     "@adonisjs/ace": "~4.0.7",
     "execa": "~0.8.0",
     "listr": "~0.13.0",
+    "ora": "~1.3.0",
     "release-it": "~4.3.0",
     "semver": "~5.4.1",
     "shipit-cli": "~3.0.0"
