@@ -1,6 +1,6 @@
 'use strict'
 
-const { Command } = require('@adonisjs/ace')
+const { Command, inquirer: Inquirer } = require('@adonisjs/ace')
 const Pkg = require('./../package.json')
 const Semver = require('semver')
 const Execa = require('execa')
@@ -73,11 +73,8 @@ class Deploy extends Command {
       )}\n`
     )
 
-    // use "this.choice" to ask a question and provide an array of answers
-    // using objects as the array elements allows you to specify "name" and "value"
-    // for the answers
-    // here, the selected "value" assigns to the "version" variable
-    const version = await this.choice(`Select the new version`, [
+    // prepare version choices for patch, minor, major and a custom user input
+    const choices = [
       {
         name: `patch: ${this.chalk.bold(Semver.inc(currentVersion, 'patch'))}`,
         value: Semver.inc(currentVersion, 'patch')
@@ -89,8 +86,33 @@ class Deploy extends Command {
       {
         name: `major: ${this.chalk.bold(Semver.inc(currentVersion, 'major'))}`,
         value: Semver.inc(currentVersion, 'major')
+      },
+      {
+        name: 'Other - specify your own',
+        value: null
       }
-    ])
+    ]
+
+    // use "this.choice" to ask a question and provide an array of answers
+    // using objects as the array elements allows you to specify "name" and "value"
+    // for the answers
+    // here, the selected "value" assigns to the "version" variable
+    // "patch" at the end preselects the "patch" version
+    let version = await this.choice(`Select the new version`, choices, 'patch')
+
+    // check whether the user wants to specify a custom version
+    if (!version) {
+      console.log(
+        `\n${this.chalk.yellow(
+          'Type your version in a valid semver format, for example `2.7.10`. See http://semver.org'
+        )}\n`
+      )
+
+      // grab user input from stdin
+      version = await this.ask('Version: ')
+      // verify the version
+      await this.isValidVersion(version)
+    }
 
     // return the selected version which is an actual version, like "2.7.10"
     return version
@@ -112,10 +134,7 @@ class Deploy extends Command {
     const newVersion = Semver.inc(currentVersion, versionInput)
 
     // verify the new version is valid, if not stop processing
-    if (!Semver.valid(newVersion)) {
-      console.log(this.chalk.magenta(`Sorry, we can’t handle the version increment ${this.chalk.bold(versionInput)}.`))
-      process.exit(1)
-    }
+    await this.isValidVersion(newVersion)
 
     // ask for confirmation to give context about the version bump
     // if the user declines, stop here
@@ -129,6 +148,18 @@ class Deploy extends Command {
 
     // return the new version as an actual version, like "2.7.10"
     return newVersion
+  }
+
+  /**
+   * Validate the version input and stop processing if invalid
+   *
+   * @param {*} version actual semver version, like "2.7.10"
+   */
+  async isValidVersion (version) {
+    if (!Semver.valid(version)) {
+      console.log(this.chalk.magenta(`Sorry, can’t handle the version input.`))
+      process.exit(1)
+    }
   }
 
   /**
