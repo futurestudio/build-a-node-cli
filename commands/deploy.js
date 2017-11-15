@@ -1,6 +1,6 @@
 'use strict'
 
-const { Command, inquirer: Inquirer } = require('@adonisjs/ace')
+const { Command } = require('@adonisjs/ace')
 const Pkg = require('./../package.json')
 const Semver = require('semver')
 const Execa = require('execa')
