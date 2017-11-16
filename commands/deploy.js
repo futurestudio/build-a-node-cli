@@ -15,7 +15,7 @@ class Deploy extends Command {
     return `deploy
     { version? : Semver version shortcut }
     { -s, --skip-release: Skip git release tag }
-    { -t, --skip-tests: Skip test run before deployment }`
+    { -t, --skip-tests: Skip test run before deployment. Yolo :) }`
   }
 
   /**
