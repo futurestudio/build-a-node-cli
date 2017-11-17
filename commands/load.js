@@ -17,7 +17,7 @@ class Load extends Command {
    * about the command.
    */
   static get description () {
-    return 'Load movie and TV show sample data'
+    return 'Load sample data'
   }
 
   /**
@@ -28,15 +28,31 @@ class Load extends Command {
    *                   Check the signature for available flags
    */
   async handle ({ version }, flags) {
-    const spinner = Ora('Loading movie sample data').start()
+    const spinner = Ora('Loading movie sample data')
+    spinner.start()
 
     setTimeout(() => {
       spinner.color = 'magenta'
       spinner.text = 'Loading movie poster and backgrounds'
+    }, 1000)
+
+    setTimeout(() => {
+      spinner.color = 'yellow'
+      spinner.text = 'Starting the rocket'
     }, 2000)
 
     setTimeout(() => {
-      spinner.succeed('Got everything in the pocket')
+      spinner.color = 'green'
+      spinner.text = 'Boarding passengers'
+    }, 3000)
+
+    setTimeout(() => {
+      spinner.color = 'cyan'
+      spinner.text = 'Launch the rocket!!!!'
+    }, 4000)
+
+    setTimeout(() => {
+      spinner.succeed('Houston? We landed!')
     }, 5000)
   }
 }
