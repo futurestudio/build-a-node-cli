@@ -7,6 +7,7 @@ const Ace = require('@adonisjs/ace')
 Ace.addCommand(require('./commands/ask'))
 Ace.addCommand(require('./commands/load'))
 Ace.addCommand(require('./commands/run-tasks'))
+Ace.addCommand(require('./commands/run-system-command'))
 
 Ace.addCommand(require('./commands/deploy'))
 
