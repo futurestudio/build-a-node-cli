@@ -10,7 +10,9 @@ class RunTasks extends Command {
    */
   static get signature () {
     return `run-tasks
-    { -s, --skip: Skip the first task in the list of tasks }`
+    { -f, --skip-fuel: Skip fueling the rocket }
+    { -p, --skip-passengers: Skip boarding passengers }
+    { -c, --captain=@value: Specify the captain's name }`
   }
 
   /**
@@ -28,40 +30,41 @@ class RunTasks extends Command {
    * @param {*} flags  an object of flags where each value is either "null" or "true".
    *                   Check the signature for available flags
    */
-  async handle (args, { skip }) {
+  async handle (args, { skipFuel, skipPassengers, captain }) {
     // deployment task list
     const tasks = new Listr([
       {
-        title: 'Loading movie sample data',
+        title: 'Fueling the rocket',
         skip: () => {
           // returning a truthy value for "skip" will actually skip the task
           // a falsy value will not skip the task execution
-          return skip ? 'Skipping test run.' : false
+          return skipFuel ? 'Skipping fueling.' : false
         },
         task: () => {
           return this.waitASecond()
         }
       },
       {
-        title: 'Loading movie poster and backgrounds',
-        task: () => {
-          return this.waitASecond()
-        }
-      },
-      {
-        title: 'Starting the rocket',
-        task: () => {
-          return this.waitASecond()
-        }
-      },
-      {
         title: 'Boarding passengers',
+        skip: skipPassengers,
         task: () => {
           return this.waitASecond()
         }
       },
       {
-        title: 'Launch the rocket!!!!',
+        title: 'Starting the engines',
+        task: () => {
+          return this.waitASecond()
+        }
+      },
+      {
+        title: typeof captain === 'string' ? `${captain} is launching the rocket!!!!` : 'Launching the rocket!!!!',
+        task: () => {
+          return this.waitASecond()
+        }
+      },
+      {
+        title: 'Shooting for the stars',
         task: () => {
           return this.waitASecond()
         }
