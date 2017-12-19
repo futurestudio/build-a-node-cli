@@ -12,16 +12,16 @@ class RunSystemCommand extends Command {
 
   /**
    * Use this description to provide additional details
-   * about the command.
+   * about the command
    */
   static get description () {
     return 'Run a command, like “npm test”'
   }
 
   /**
-   * Handle the "deploy" command
+   * Handle the command
    *
-   * @param {*} args   arguments object for the "deploy" command
+   * @param {*} args   arguments object, contains only data if you’ve added arguments in the signature
    * @param {*} flags  an object of flags where each value is either "null" or "true".
    *                   Check the signature for available flags
    */
