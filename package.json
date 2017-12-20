@@ -1,10 +1,10 @@
 {
-  "name": "build-your-node-cli",
-  "description": "Seamlessly deploy your Node.js app to your server",
+  "name": "build-a-node-cli",
+  "description": "Build a CLI with Node.js",
   "version": "1.0.0",
   "author": "Future Studio <info@futurestud.io>",
   "bugs": {
-    "url": "https://github.com/fs-opensource/build-your-node-cli/issues"
+    "url": "https://github.com/fs-opensource/build-a-node-cli/issues"
   },
   "contributors": [
     {
@@ -25,12 +25,12 @@
     "execa": "~0.8.0",
     "listr": "~0.13.0",
     "ora": "~1.3.0",
-    "release-it": "~4.3.0",
+    "release-it": "~5.1.2",
     "semver": "~5.4.1",
     "shipit-cli": "~3.0.0"
   },
   "devDependencies": {
-    "eslint": "~4.11.0",
+    "eslint": "~4.13.1",
     "eslint-config-standard": "~10.2.1",
     "eslint-plugin-import": "~2.8.0",
     "eslint-plugin-node": "~5.2.1",

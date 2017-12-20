@@ -1,18 +1,15 @@
 'use strict'
 
+const Fs = require('fs')
 const { Command } = require('@adonisjs/ace')
 
-class Hello extends Command {
+class Package extends Command {
   /**
    * The method signature describes the comannd, arguments and flags/aliases
    * The words flags and aliases mean the same thing in this context 😃
    */
   static get signature () {
-    return `hello
-      { name?: Say hello to the named user }
-      { -f, --friendly: a friendly hello }
-      { -g, --grumpy-cat: a grumpy cat hello :( }
-    `
+    return `pkg`
   }
 
   /**
@@ -20,7 +17,7 @@ class Hello extends Command {
    * about the command
    */
   static get description () {
-    return 'Say hello'
+    return 'Show the package.json content'
   }
 
   /**
@@ -29,9 +26,10 @@ class Hello extends Command {
    * @param {*} args   arguments object
    * @param {*} flags  arguments object
    */
-  async handle ({ name }, { friendly, grumpyCat }) {
-    console.log(`Hello ${friendly ? 'friendly ' : ''}${name || 'Stranger'} ${grumpyCat ? ':(' : ''}`)
+  async handle () {
+    const pkg = Fs.readFileSync('package.json')
+    console.log(pkg.toString())
   }
 }
 
-module.exports = Hello
+module.exports = Package
