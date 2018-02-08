@@ -5,7 +5,7 @@ The best part: **you can build a CLI in Node.js**. Stay with the platform you lo
 
 
 ## Free Video Series
-This repository is the companion to a [free YouTube video series](https://www.youtube.com/watch?v=qE_TKIcu4pE&list=PLpUMhvC6l7ANfqV2erFmMJ6v9DQDS28L9). The videos walk you through the process of creating your own CLI with Node.js
+This repository is the companion to a [**free YouTube video series**](https://www.youtube.com/watch?v=qE_TKIcu4pE&list=PLpUMhvC6l7ANfqV2erFmMJ6v9DQDS28L9). The videos walk you through the process of creating your own CLI with Node.js
 
 
 ## Content
