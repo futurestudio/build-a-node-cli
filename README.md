@@ -6,14 +6,16 @@ Command line apps are powerful helpers for automation. Need to run a sequence of
 
 The best part: **you can build a CLI in Node.js**. Stay with the platform you love. Build a CLI with Node.js!
 
+
 ------
 
-<p align="center"><sup>This free video series is sponsored by <a href="https://futurestud.io">Future Studio University 🚀</a>.</sup>
+<p align="center"><sup>This free video series is sponsored by <a href="https://futurestud.io">Future Studio University 🚀</a></sup>
 <br><b>
-Join the <a href="https://futurestud.io/university">Future Studio University and Skyrocket in Node.js</a>.</b>
+Join the <a href="https://futurestud.io/university">Future Studio University and Skyrocket in Node.js</a></b>
 </p>
 
 ------
+
 
 ## Free Video Series
 
