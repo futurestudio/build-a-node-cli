@@ -1,14 +1,26 @@
 # Build a Node.js CLI with Ace
+
+> Automate repetitive tasks and build a CLI with Node.js
+
 Command line apps are powerful helpers for automation. Need to run a sequence of tasks? Use the command line!
 
 The best part: **you can build a CLI in Node.js**. Stay with the platform you love. Build a CLI with Node.js!
 
+------
+
+<p align="center"><sup>🚀 This free video series is sponsored by <a href="https://futurestud.io">Future Studio</a>.</sup>
+<br><b>
+Join the <a href="https://futurestud.io/university">Future Studio University and Skyrocket in Node.js</a>.</b>
+</p>
+
+------
 
 ## Free Video Series
+
 This repository is the companion to a [**free YouTube video series**](https://www.youtube.com/watch?v=qE_TKIcu4pE&list=PLpUMhvC6l7ANfqV2erFmMJ6v9DQDS28L9). The videos walk you through the process of creating your own CLI with Node.js
 
-
 ## Content
+
 The first, free season of this video series covers the following topics:
 
 - Project Setup
@@ -24,6 +36,6 @@ The first, free season of this video series covers the following topics:
 - Run a list of sequential tasks
 - Colorful outputs
 
-
 ## Let Us Know What You Build!
+
 We love to hear what tools and utilities you build. Please share it with us and tweet us a picture on Twitter: [@futurestud_io](https://twitter.com/futurestud_io)
