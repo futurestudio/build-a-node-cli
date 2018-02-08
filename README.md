@@ -8,7 +8,7 @@ The best part: **you can build a CLI in Node.js**. Stay with the platform you lo
 
 ------
 
-<p align="center"><sup>🚀 This free video series is sponsored by <a href="https://futurestud.io">Future Studio</a>.</sup>
+<p align="center"><sup>This free video series is sponsored by <a href="https://futurestud.io">Future Studio 🚀</a>.</sup>
 <br><b>
 Join the <a href="https://futurestud.io/university">Future Studio University and Skyrocket in Node.js</a>.</b>
 </p>
