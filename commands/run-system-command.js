@@ -43,7 +43,7 @@ class RunSystemCommand extends Command {
       // await Execa('npm', ['test'])
     } catch (err) {
       // catch any error and print the error message
-      console.log(`❗️ Error: ${this.chalk.red(err.message)}`)
+      console.log(`❗️ Error: ${this.error(err.message)}`)
       // exit the process to stop everything
       process.exit(1)
     }

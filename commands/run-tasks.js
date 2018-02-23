@@ -40,44 +40,31 @@ class RunTasks extends Command {
           // a falsy value will not skip the task execution
           return skipFuel ? 'Skipping fueling.' : false
         },
-        task: () => {
-          return this.waitASecond()
-        }
+        task: () => this.waitASecond()
       },
       {
         title: 'Boarding passengers',
         skip: skipPassengers,
-        task: () => {
-          return this.waitASecond()
-        }
+        task: () => this.waitASecond()
       },
       {
         title: 'Starting the engines',
-        task: () => {
-          return this.waitASecond()
-        }
+        task: () => this.waitASecond()
       },
       {
         title: typeof captain === 'string' ? `${captain} is launching the rocket!!!!` : 'Launching the rocket!!!!',
-        task: () => {
-          return this.waitASecond()
-        }
+        task: () => this.waitASecond()
       },
       {
         title: 'Shooting for the stars',
-        task: () => {
-          return this.waitASecond()
-        }
+        task: () => this.waitASecond()
       },
       {
         title: 'Houston? We landed!',
-        task: () => {
-          return this.waitASecond()
-        }
+        task: () => this.waitASecond()
       }
     ])
 
-    // run the task list which returns a promise
     await tasks.run()
   }
 

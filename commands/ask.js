@@ -27,7 +27,8 @@ class Ask extends Command {
    *                   Check the signature for available flags
    */
   async handle (args, flags) {
-    const input = await this.ask('What’s your name?')
+    // ask for the user's name, default to "Cool Friend"
+    const input = await this.ask('What’s your name?', 'Cool Friend')
     console.log(`\nOh yeah, nice name ${this.chalk.bold.magenta(input)}!`)
   }
 }
