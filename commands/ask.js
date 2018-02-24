@@ -29,7 +29,23 @@ class Ask extends Command {
   async handle (args, flags) {
     // ask for the user's name, default to "Cool Friend"
     const input = await this.ask('What’s your name?', 'Cool Friend')
-    console.log(`\nOh yeah, nice name ${this.chalk.bold.magenta(input)}!`)
+    console.log(`\nOh yeah, nice name ${this.chalk.bold.magenta(input)}!\n`)
+
+    const confirm = await this.confirm('Do you want another question?', { default: false })
+
+    if (confirm) {
+      const like = await this.choice('I guess you’re passionate about Node.js 🔥?', [
+        // create an answer which is also the value
+        'Of course',
+        // or split answer text and related value
+        {
+          name: 'Hell yes!', // this is the selectable answer
+          value: 'hell' // this is the value
+        }
+      ])
+
+      console.log(this.chalk.bold.green(like))
+    }
   }
 }
 
