@@ -34,15 +34,19 @@ class Ask extends Command {
     const confirm = await this.confirm('Do you want another question?', { default: false })
 
     if (confirm) {
-      const like = await this.choice('I guess you’re passionate about Node.js 🔥?', [
-        // create an answer which is also the value
-        'Of course',
-        // or split answer text and related value
-        {
-          name: 'Hell yes!', // this is the selectable answer
-          value: 'hell' // this is the value
-        }
-      ])
+      const like = await this.choice(
+        'I guess you’re passionate about Node.js 🔥?',
+        [
+          // create an answer which is also the value
+          'Of course',
+          // or split answer text and related value
+          {
+            name: 'Hell yes!', // this is the selectable answer
+            value: 'hell' // this is the value
+          }
+        ],
+        'hell' // value of the selected default answer
+      )
 
       console.log(this.chalk.bold.green(like))
     }
