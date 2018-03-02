@@ -23,18 +23,19 @@ This repository is the companion to a [**free YouTube video series**](https://ww
 ## Content
 The first, free season of this video series covers the following topics:
 
-- Project Setup
-- Create commands using ECMAScript classes
-- Use Node.js modules and NPM packages
-- Add aliases/flags
-- Define arguments
-- Generate a help output
-- Grab inputs from the console
-- Ask a y/n question
-- Select an answer from a list of questions
-- Loading indicators (for async tasks)
-- Run a list of sequential tasks
-- Colorful outputs
+- [Project Setup](https://github.com/fs-opensource/build-a-node-cli/blob/master/cli.js)
+- Create [commands](https://github.com/fs-opensource/build-a-node-cli/blob/master/commands/hello.js) using ECMAScript classes
+- Use [Node.js modules](https://github.com/fs-opensource/build-a-node-cli/blob/master/commands/package.js#L3) and [NPM packages](https://github.com/fs-opensource/build-a-node-cli/blob/master/commands/load.js#L4)
+- Add [aliases/flags](https://github.com/fs-opensource/build-a-node-cli/blob/master/commands/hello.js#L13)
+- Define [arguments](https://github.com/fs-opensource/build-a-node-cli/blob/master/commands/hello.js#L12)
+- Generate a help output: add `-h` to any command
+- Grab [inputs from the console](https://github.com/fs-opensource/build-a-node-cli/blob/master/commands/ask.js#L31)
+- Ask a [y/n question](https://github.com/fs-opensource/build-a-node-cli/blob/master/commands/ask.js#L34)
+- Select an [answer from a list of choices](https://github.com/fs-opensource/build-a-node-cli/blob/master/commands/ask.js#L37)
+- [Loading indicators](https://github.com/fs-opensource/build-a-node-cli/blob/master/commands/load.js) (for async tasks)
+- Run a [list of sequential tasks](https://github.com/fs-opensource/build-a-node-cli/blob/master/commands/run-tasks.js)
+- [Colorful outputs](https://github.com/fs-opensource/build-a-node-cli/blob/master/commands/colors.js)
+- Make use of [icons](https://github.com/fs-opensource/build-a-node-cli/blob/master/commands/icons.js)
 
 
 ## Let Us Know What You Build!
