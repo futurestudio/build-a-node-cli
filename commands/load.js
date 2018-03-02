@@ -31,28 +31,28 @@ class Load extends Command {
     const spinner = Ora('Fueling the rocket')
     spinner.start()
 
-    await this.wait(1000)
+    await this.waitASecond()
     spinner.color = 'magenta'
     spinner.text = 'Boarding passengers'
 
-    await this.wait(1000)
+    await this.waitASecond()
     spinner.color = 'yellow'
     spinner.text = 'Starting the engines'
 
-    await this.wait(1000)
+    await this.waitASecond()
     spinner.color = 'green'
     spinner.text = 'Launching the rocket!!!!'
 
-    await this.wait(1000)
+    await this.waitASecond()
     spinner.color = 'cyan'
     spinner.text = 'Shooting for the stars'
 
-    await this.wait(1000)
+    await this.waitASecond()
     spinner.succeed('Houston? We landed!')
   }
 
-  wait (timeout) {
-    return new Promise(resolve => setTimeout(resolve, timeout))
+  waitASecond () {
+    return new Promise(resolve => setTimeout(resolve, 1000))
   }
 }
 

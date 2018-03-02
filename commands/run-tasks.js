@@ -69,11 +69,7 @@ class RunTasks extends Command {
   }
 
   waitASecond () {
-    return new Promise(resolve => {
-      setTimeout(() => {
-        resolve()
-      }, 1000)
-    })
+    return new Promise(resolve => setTimeout(resolve, 1000))
   }
 }
 
