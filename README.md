@@ -1,5 +1,5 @@
 # Build a Node.js CLI with Ace
-> Automate repetitive tasks and build a CLI with Node.js
+> Automate repetitive tasks and build a CLI with Node.js 🔥
 
 Command line apps are powerful helpers for automation. Need to run a sequence of tasks? Use the command line!
 
