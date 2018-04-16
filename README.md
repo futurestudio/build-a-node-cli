@@ -32,7 +32,7 @@ The first, free season of this video series covers the following topics:
 - [Grab inputs from the console](https://github.com/fs-opensource/build-a-node-cli/blob/master/commands/ask.js#L31)
 - [Ask a y/n question](https://github.com/fs-opensource/build-a-node-cli/blob/master/commands/ask.js#L34)
 - [Select an answer from a list of choices](https://github.com/fs-opensource/build-a-node-cli/blob/master/commands/ask.js#L37)
-- [Loading indicators](https://github.com/fs-opensource/build-a-node-cli/blob/master/commands/load.js) (for async tasks)
+- [Loading indicators](https://github.com/fs-opensource/build-a-node-cli/blob/master/commands/ora.js) (for async tasks)
 - [Run a list of sequential tasks](https://github.com/fs-opensource/build-a-node-cli/blob/master/commands/run-tasks.js)
 - [Colorful outputs](https://github.com/fs-opensource/build-a-node-cli/blob/master/commands/colors.js)
 - [Make use of icons](https://github.com/fs-opensource/build-a-node-cli/blob/master/commands/icons.js)
