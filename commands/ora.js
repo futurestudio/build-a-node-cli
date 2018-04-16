@@ -4,20 +4,12 @@ const { Command } = require('@adonisjs/ace')
 const Ora = require('ora')
 
 class Load extends Command {
-  /**
-   * The method signature describes the comannd, arguments and flags/aliases
-   * The words flags and aliases mean the same thing in this context 😃
-   */
   static get signature () {
-    return `load`
+    return `ora`
   }
 
-  /**
-   * Use this description to provide additional details
-   * about the command
-   */
   static get description () {
-    return 'Load sample data'
+    return 'Ora spinners for long running tasks'
   }
 
   /**

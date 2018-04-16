@@ -5,7 +5,9 @@ const Ace = require('@adonisjs/ace')
 
 // add commands as ES2015 classes
 Ace.addCommand(require('./commands/ask'))
-Ace.addCommand(require('./commands/load'))
+Ace.addCommand(require('./commands/ora'))
+Ace.addCommand(require('./commands/ora-promise'))
+Ace.addCommand(require('./commands/ora-customized'))
 Ace.addCommand(require('./commands/hello'))
 Ace.addCommand(require('./commands/icons'))
 Ace.addCommand(require('./commands/colors'))
