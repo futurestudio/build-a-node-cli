@@ -13,6 +13,8 @@ class Load extends Command {
   }
 
   async handle (args, flags) {
+    // Customize your Ora spinner
+    // this works with a spinner assignment "const spinner = Ora({ options })" as well
     Ora.promise(this.wait(), {
       text: 'Custom spinners are freeeeekin awesome!',
       spinner: 'dots12',

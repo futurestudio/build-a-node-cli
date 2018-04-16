@@ -13,6 +13,7 @@ class Load extends Command {
   }
 
   async handle (args, flags) {
+    // Ora promise shortcut: spinner succeeds if the promise resolves, fails if rejects
     Ora.promise(this.wait(), 'Waiting for the task to finish')
   }
 
