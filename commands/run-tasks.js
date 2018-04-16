@@ -38,8 +38,20 @@ class RunTasks extends Command {
         skip: () => {
           // returning a truthy value for "skip" will actually skip the task
           // a falsy value will not skip the task execution
-          return skipFuel ? 'Skipping fueling.' : false
+          return skipFuel ? 'Skip fueling.' : false
         },
+        task: () => this.waitASecond()
+      },
+      {
+        title: 'Adding extra snacks for the trip',
+        skip: () => true,
+        task: () => this.waitASecond()
+      },
+      {
+        title: 'Allow extra bag for passengers',
+        // you can disable tasks on wish
+        // return a falsy value for "enabled" to disable this task in the list
+        enabled: () => false,
         task: () => this.waitASecond()
       },
       {
