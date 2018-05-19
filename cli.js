@@ -15,6 +15,7 @@ Ace.addCommand(require('./commands/colors'))
 Ace.addCommand(require('./commands/package'))
 Ace.addCommand(require('./commands/enquirer'))
 Ace.addCommand(require('./commands/run-tasks'))
+Ace.addCommand(require('./commands/run-tasks-parallel'))
 Ace.addCommand(require('./commands/run-system-command'))
 
 // Boot ace to execute commands
