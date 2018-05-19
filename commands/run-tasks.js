@@ -8,7 +8,7 @@ class RunTasks extends Command {
    * The method signature describes the comannd, arguments and flags/aliases
    * The words flags and aliases mean the same thing in this context 😃
    */
-  static get signature () {
+  static get signature() {
     return `run-tasks
     { -f, --skip-fuel: Skip fueling the rocket }
     { -p, --skip-passengers: Skip boarding passengers }
@@ -19,7 +19,7 @@ class RunTasks extends Command {
    * Use this description to provide additional details
    * about the command
    */
-  static get description () {
+  static get description() {
     return 'Run a list of tasks.'
   }
 
@@ -30,7 +30,7 @@ class RunTasks extends Command {
    * @param {*} flags  an object of flags where each value is either "null" or "true".
    *                   Check the signature for available flags
    */
-  async handle (args, { skipFuel, skipPassengers, captain }) {
+  async handle(args, { skipFuel, skipPassengers, captain }) {
     // deployment task list
     const tasks = new Listr([
       {
@@ -80,7 +80,7 @@ class RunTasks extends Command {
     await tasks.run()
   }
 
-  waitASecond () {
+  waitASecond() {
     return new Promise(resolve => setTimeout(resolve, 1000))
   }
 }

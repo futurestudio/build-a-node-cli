@@ -6,7 +6,7 @@ class RunSystemCommand extends Command {
    * The method signature describes the comannd, arguments and flags/aliases
    * The words flags and aliases mean the same thing in this context 😃
    */
-  static get signature () {
+  static get signature() {
     return `run-command`
   }
 
@@ -14,7 +14,7 @@ class RunSystemCommand extends Command {
    * Use this description to provide additional details
    * about the command
    */
-  static get description () {
+  static get description() {
     return 'Run a command, like “npm test”'
   }
 
@@ -25,7 +25,7 @@ class RunSystemCommand extends Command {
    * @param {*} flags  an object of flags where each value is either "null" or "true".
    *                   Check the signature for available flags
    */
-  async handle (args, flags) {
+  async handle(args, flags) {
     try {
       // grab your Node.js version
       const node = await Execa('node', ['-v'])

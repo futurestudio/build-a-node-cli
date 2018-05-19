@@ -4,11 +4,11 @@ const { Command } = require('@adonisjs/ace')
 const Ora = require('ora')
 
 class Load extends Command {
-  static get signature () {
+  static get signature() {
     return `ora`
   }
 
-  static get description () {
+  static get description() {
     return 'Ora spinners for long running tasks'
   }
 
@@ -19,7 +19,7 @@ class Load extends Command {
    * @param {*} flags  an object of flags where each value is either "null" or "true".
    *                   Check the signature for available flags
    */
-  async handle (args, flags) {
+  async handle(args, flags) {
     const spinner = Ora('Fueling the rocket')
     spinner.start()
 
@@ -43,7 +43,7 @@ class Load extends Command {
     spinner.succeed('Houston? We landed!')
   }
 
-  waitASecond () {
+  waitASecond() {
     return new Promise(resolve => setTimeout(resolve, 1000))
   }
 }

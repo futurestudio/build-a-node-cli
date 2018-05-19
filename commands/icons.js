@@ -3,11 +3,11 @@
 const { Command } = require('@adonisjs/ace')
 
 class Icons extends Command {
-  static get signature () {
+  static get signature() {
     return `icons`
   }
 
-  static get description () {
+  static get description() {
     return 'Print icons'
   }
 
@@ -18,7 +18,7 @@ class Icons extends Command {
    * @param {*} flags  an object of flags where each value is either "null" or "true".
    *                   Check the signature for available flags
    */
-  async handle (args, flags) {
+  async handle(args, flags) {
     console.log(`${this.icon('info')} Did you know Ace supports icons?`)
     console.log(`${this.icon('success')} Yeeezzzzz!`)
     console.log(`${this.icon('warn')} even for warnings and ${this.icon('error')} errors.`)

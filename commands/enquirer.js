@@ -3,15 +3,15 @@
 const { Command, enquirer } = require('@adonisjs/ace')
 
 class Enquirer extends Command {
-  static get signature () {
+  static get signature() {
     return `enquirer`
   }
 
-  static get description () {
+  static get description() {
     return 'Access the enquirer instance through Ace'
   }
 
-  async handle () {
+  async handle() {
     const color = enquirer.question('color', 'What is your favorite color?', {
       default: 'blue'
     })
