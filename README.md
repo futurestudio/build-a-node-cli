@@ -1,4 +1,7 @@
 # Build a Node.js CLI with Ace
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/futurestudio/build-a-node-cli.svg)](https://greenkeeper.io/)
+
 > Automate repetitive tasks and build a CLI with Node.js 🔥
 
 Command line apps are powerful helpers for automation. Need to run a sequence of tasks? Use the command line!
